@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from './components/Header'
-import Hero from './Components/Hero'
-import ProductCards from './Components/ProductCards'
-import Home from './Components/Home'
+import { Route, Routes } from 'react-router-dom'
+import Header from './Components/Header'
+import Home from './Pages/Home'
 import Footer from './Components/Footer'
+import ProductDetails from './Pages/ProductDetails'
 // import Footer from './components/Footer'
 // import Cards from './components/CategoriesCards'
 // import Categories from './components/Categories'
@@ -14,14 +14,12 @@ import Footer from './Components/Footer'
 function App() {
   return (
     <div>
-        
-        <Header/>
-        <Hero/>
-        
-        <ProductCards/>
-       <Home/>
-       <Footer/>
-        
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/product/:id" element={<ProductDetails/>}/>
+      </Routes>
+      <Footer/>
     </div>
   )
 }
