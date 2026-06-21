@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Hero from './Components/Hero'
 import ProductCards from './Components/ProductCards'
 import Home from './Components/Home'
+import Footer from './Components/Footer'
 // import Footer from './components/Footer'
 // import Cards from './components/CategoriesCards'
 // import Categories from './components/Categories'
@@ -19,6 +20,7 @@ function App() {
         
         <ProductCards/>
        <Home/>
+       <Footer/>
         
     </div>
   )
